@@ -1,0 +1,1 @@
+# code-jam-10-qualifier
