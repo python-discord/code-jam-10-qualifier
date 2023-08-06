@@ -29,8 +29,10 @@ class ValidInputTest(unittest.TestCase):
                      "images/pydis_logo_unscrambled.png"),
             TestInfo("images/great_wave_scrambled.png", (1104, 1600), (16, 16), "images/great_wave_order.txt",
                      "images/great_wave_unscrambled.png"),
-            TestInfo("images/almond_blossoms_scrambled.png", (1920, 1517), (1, 1), "images/almond_blossoms_order.txt",
-                     "images/almond_blossoms_unscrambled.png"),
+            TestInfo("images/secret_image1_scrambled.png", (800, 600), (20, 20), "images/secret_image1_order.txt",
+                     "images/secret_image1_unscrambled.png"),
+            TestInfo("images/secret_image2_scrambled.png", (800, 600), (20, 20), "images/secret_image2_order.txt",
+                     "images/secret_image2_unscrambled.png")
         ]
 
         self.real_valid_input = qualifier.valid_input
