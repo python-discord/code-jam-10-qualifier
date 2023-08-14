@@ -51,13 +51,13 @@ class ValidInputTest(unittest.TestCase):
         """Give an ordering that isn't a permutation of range(len(ordering))."""
         ordering = self.images[0].ordering.copy()
         ordering[-1] -= 1
-        self.assertFalse(qualifier.valid_input(self.images[0].image_size, (64, 64), ordering))
+        self.assertFalse(qualifier.valid_input(self.images[0].image_size, (256, 256), ordering))
 
     def test_tile_size_doesnt_match_ordering(self):
         """Should not be valid if the length of `ordering` is not the number of tiles."""
         ordering = self.images[0].ordering.copy()
         ordering.append(len(ordering))  # Add this value specifically so the ordering itself remains valid.
-        self.assertFalse(qualifier.valid_input(self.images[0].image_size, (64, 64), ordering))
+        self.assertFalse(qualifier.valid_input(self.images[0].image_size, (256, 256), ordering))
 
     def test_valid_input(self):
         """Make sure `valid_input` returns True for valid input."""
@@ -95,7 +95,7 @@ class ValidInputTest(unittest.TestCase):
                 self.images[0].unscrambled_image_path, self.images[0].tile_size, self.images[0].ordering,
                 "images/user_output.png"
             )
-        self.assertEqual("The tile size of ordering are not valid for the given image", str(exc.exception))
+        self.assertEqual("The tile size or ordering are not valid for the given image", str(exc.exception))
 
     def test_correct_ordering(self):
         """Run the images against the qualifier code, check if the unscrambled image is the proper one."""
