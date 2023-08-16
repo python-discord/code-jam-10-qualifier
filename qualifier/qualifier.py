@@ -16,5 +16,5 @@ def rearrange_tiles(image_path: str, tile_size: tuple[int, int], ordering: list[
 
     The tile size must divide each image dimension without remainders, and `ordering` must use each input tile exactly
     once. If these conditions do not hold, raise a ValueError with the message:
-    "The tile size of ordering are not valid for the given image".
+    "The tile size or ordering are not valid for the given image".
     """
