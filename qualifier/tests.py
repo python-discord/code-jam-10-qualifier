@@ -32,7 +32,9 @@ class ValidInputTest(unittest.TestCase):
             TestInfo("images/secret_image1_scrambled.png", (800, 600), (20, 20), "images/secret_image1_order.txt",
                      "images/secret_image1_unscrambled.png"),
             TestInfo("images/secret_image2_scrambled.png", (800, 600), (20, 20), "images/secret_image2_order.txt",
-                     "images/secret_image2_unscrambled.png")
+                     "images/secret_image2_unscrambled.png"),
+            TestInfo("images/great_wave_2_scrambled.png", (1104, 1600), (50, 48), "images/great_wave_2_order.txt",
+                     "images/great_wave_unscrambled.png")
         ]
 
         self.real_valid_input = qualifier.valid_input
